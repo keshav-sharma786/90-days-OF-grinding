@@ -2,7 +2,7 @@ import Navbar from "./Navbar";
 import Input from "./Input";
 import Buttons from "./Buttons";
 import TextPreview from "./TextPreview";
-import Temporary from "./Temporary"
+// import Temporary from "./Temporary"
 import { useState } from "react";
 
 export default function App() {
@@ -21,10 +21,10 @@ export default function App() {
     <>
       <Navbar />
       {/* passing setInput as a props in the Input component */}
-      <Input setInput={setInput} setTextAreaInput={setTextAreaInput} setWordLength={setWordLength} setNumberOfChars={setNumberOfChars}/>
-      <Buttons input={input} textAreaInput={textAreaInput} setInput={setInput} />
+      <Input setInput={setInput} textAreaInput={textAreaInput} setTextAreaInput={setTextAreaInput} setWordLength={setWordLength} setNumberOfChars={setNumberOfChars}/>
+      <Buttons input={input} textAreaInput={textAreaInput} setTextAreaInput={setTextAreaInput} setInput={setInput} />
       <TextPreview input={input} wordLength={wordLength} numberOfChars= {numberOfChars} />
-      <Temporary />
+      {/* <Temporary /> */}
     </>
   )
 }

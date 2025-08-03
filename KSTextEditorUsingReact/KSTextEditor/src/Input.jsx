@@ -7,6 +7,8 @@ export default function Input(props) {
   const { setWordLength } = props;
   const { setNumberOfChars } = props;
   const { setTextAreaInput } = props;
+  const { textAreaInput } = props;
+  console.log(textAreaInput);
   //   console.log(setInput);
   // initially the userInput will be completely in the text area, that's why initially the input value will be the empty string
   //   console.log("Namaste Javascript");
