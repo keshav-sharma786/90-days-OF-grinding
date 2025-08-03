@@ -1,0 +1,6 @@
+.btns-container {
+    margin-left: 8% !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
