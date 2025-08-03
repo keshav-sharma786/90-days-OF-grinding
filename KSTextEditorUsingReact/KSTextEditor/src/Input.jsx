@@ -6,6 +6,7 @@ export default function Input(props) {
   const { setInput } = props;
   const { setWordLength } = props;
   const { setNumberOfChars } = props;
+  const { setTextAreaInput } = props;
   //   console.log(setInput);
   // initially the userInput will be completely in the text area, that's why initially the input value will be the empty string
   //   console.log("Namaste Javascript");
@@ -39,6 +40,7 @@ export default function Input(props) {
             // so we will use setState here
             // for simplicity i will use this state in the App component.
             setInput(e.target.value);
+            setTextAreaInput(e.target.value);
             // i also want to read total number of words as well as the characters entered in the text area by the user.
             let userContent = e.target.value;
             const charContent = userContent;
