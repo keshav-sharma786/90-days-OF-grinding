@@ -6,9 +6,8 @@ export default function Input(props) {
   const { setInput } = props;
   const { setWordLength } = props;
   const { setNumberOfChars } = props;
-  const { setTextAreaInput } = props;
-  const { textAreaInput } = props;
-  console.log(textAreaInput);
+  const { input } = props;
+  
   //   console.log(setInput);
   // initially the userInput will be completely in the text area, that's why initially the input value will be the empty string
   //   console.log("Namaste Javascript");
@@ -36,13 +35,13 @@ export default function Input(props) {
           className="form-control text-area bg-dark text-white mt-0"
           id="exampleFormControlTextarea1"
           rows={6}
-          defaultValue={""}
+          value={input}
           onInput={(e) => {
             // i want that whatever the user is writing in the text area, it should successfully reflect in the text preview component.
             // so we will use setState here
             // for simplicity i will use this state in the App component.
             setInput(e.target.value);
-            setTextAreaInput(e.target.value);
+            
             // i also want to read total number of words as well as the characters entered in the text area by the user.
             let userContent = e.target.value;
             const charContent = userContent;

@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function App() {
   const [input, setInput] = useState('');
   // making a state for all the btns
-  const [textAreaInput, setTextAreaInput] = useState('');
+  
   console.log(input);
   // using the useState hook for setting as well as counting the length of the words
   // basically in the starting the the length of the word will be zero because the user has not entered any word yet in the textArea box
@@ -21,8 +21,8 @@ export default function App() {
     <>
       <Navbar />
       {/* passing setInput as a props in the Input component */}
-      <Input setInput={setInput} textAreaInput={textAreaInput} setTextAreaInput={setTextAreaInput} setWordLength={setWordLength} setNumberOfChars={setNumberOfChars}/>
-      <Buttons input={input} textAreaInput={textAreaInput} setTextAreaInput={setTextAreaInput} setInput={setInput} />
+      <Input setInput={setInput} input={input}   setWordLength={setWordLength} setNumberOfChars={setNumberOfChars}/>
+      <Buttons input={input}  setInput={setInput} setWordLength={setWordLength} setNumberOfChars={setNumberOfChars} />
       <TextPreview input={input} wordLength={wordLength} numberOfChars= {numberOfChars} />
       {/* <Temporary /> */}
     </>
