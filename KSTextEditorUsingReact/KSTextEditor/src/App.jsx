@@ -11,15 +11,14 @@ export default function App() {
   const [input, setInput] = useState('');
   // making a state for all the btns
   
-  console.log(input);
+  
   // using the useState hook for setting as well as counting the length of the words
   // basically in the starting the the length of the word will be zero because the user has not entered any word yet in the textArea box
   const [wordLength, setWordLength] = useState(0);
   // initially 0 chars would be there, because initially no characters have been selected by the user
   const [numberOfChars, setNumberOfChars] = useState(0);
   const [alertMessage, setAlertMessage] = useState(null);
-  console.log(alertMessage);
-  console.log(setAlertMessage);
+  
   // console.log(setInput);
   return(
     <>

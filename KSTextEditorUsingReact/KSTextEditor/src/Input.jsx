@@ -45,14 +45,14 @@ export default function Input(props) {
             // i also want to read total number of words as well as the characters entered in the text area by the user.
             let userContent = e.target.value;
             const charContent = userContent;
-            console.log(userContent);
-            let userContentLength = userContent.length;
+            
+            // let userContentLength = userContent.length;
             // setNumberOfChars(userContentLength);
-            console.log(userContentLength);
+            
             // removing the empty spaces from start and end
             // userContent.trim();
             let wordList = userContent.split(/\s/);
-            console.log(wordList);
+            
             let words = wordList.filter((el) => {
               return el != "";
             });

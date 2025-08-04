@@ -30,23 +30,6 @@ export default function Navbar() {
                 </a>
               </li>
             </ul>
-
-            <div className="form-check form-switch">
-              <input
-                className="form-check-input mt-2"
-                type="checkbox"
-                role="switch"
-                id="switchCheckChecked"
-                defaultChecked=""
-              />
-              <label
-                style={{ color: "white" }}
-                className="form-check-label mt-1"
-                htmlFor="switchCheckChecked"
-              >
-                Change Mode
-              </label>
-            </div>
           </div>
         </div>
       </nav>

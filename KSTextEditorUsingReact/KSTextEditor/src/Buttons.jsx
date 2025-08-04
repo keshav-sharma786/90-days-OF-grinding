@@ -7,7 +7,7 @@ export default function Buttons(props) {
   const { setWordLength, setNumberOfChars } = props;
   const { setAlertMessage } = props;
   // const { setInput } = props;
-  console.log(input);
+  
   // only the last logic is left.It is basically to control the buttons
   const handleCopyClick = async (input) => {
     try {
@@ -33,7 +33,7 @@ export default function Buttons(props) {
             // changing setInput state here only
             setInput(input.toUpperCase());
             // calling the alert component
-            setAlertMessage('converted to uppercase');
+            setAlertMessage('text converted to uppercase');
             setTimeout(() => {
               setAlertMessage(null);
             }, 2000);
@@ -47,6 +47,10 @@ export default function Buttons(props) {
           onClick={() => {
             console.log("Lower case btn pressed");
             setInput(input.toLowerCase());
+            setAlertMessage('Text converted to uppercase');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Convert to Lower
@@ -56,6 +60,10 @@ export default function Buttons(props) {
           className="btn btn-primary"
           onClick={() => {
             setInput(input.split(" ").join(""));
+            setAlertMessage('Spaces Removed');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Remove Spaces
@@ -65,6 +73,10 @@ export default function Buttons(props) {
           className="btn btn-success"
           onClick={() => {
             setInput(input.replace(/[\r\n]+/gm, " "));
+            setAlertMessage('Line Break Removed');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Remove LineBreak
@@ -74,6 +86,10 @@ export default function Buttons(props) {
           className="btn btn-primary"
           onClick={() => {
             setInput(input.replace(/\s+/g, " ").trim());
+            setAlertMessage('Extra Spaces Removed');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Remove Extra Spaces
@@ -83,7 +99,10 @@ export default function Buttons(props) {
           className="btn btn-success"
           onClick={() => {
             setInput(input.split(" ").join(""));
-            
+            setAlertMessage('Text Compressed');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Compress Text
@@ -94,6 +113,10 @@ export default function Buttons(props) {
           onClick={() => {
             // selecting the input field
             handleCopyClick(input);
+            setAlertMessage('Text Copied');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Copy Text
@@ -105,6 +128,10 @@ export default function Buttons(props) {
             setInput("");
             setWordLength(0);
             setNumberOfChars(0);
+            setAlertMessage('Text Cleared');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Clear Text
