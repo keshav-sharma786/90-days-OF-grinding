@@ -5,6 +5,7 @@ export default function Buttons(props) {
   const { input } = props;
   const { setInput } = props;
   const { setWordLength, setNumberOfChars } = props;
+  const { setAlertMessage } = props;
   // const { setInput } = props;
   console.log(input);
   // only the last logic is left.It is basically to control the buttons
@@ -32,7 +33,10 @@ export default function Buttons(props) {
             // changing setInput state here only
             setInput(input.toUpperCase());
             // calling the alert component
-            
+            setAlertMessage('converted to uppercase');
+            setTimeout(() => {
+              setAlertMessage(null);
+            }, 2000);
           }}
         >
           Convert to Upper
@@ -79,6 +83,7 @@ export default function Buttons(props) {
           className="btn btn-success"
           onClick={() => {
             setInput(input.split(" ").join(""));
+            
           }}
         >
           Compress Text
