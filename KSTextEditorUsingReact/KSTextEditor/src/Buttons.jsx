@@ -1,5 +1,5 @@
 import "./Buttons.css";
-import Input from "./Input";
+
 
 export default function Buttons(props) {
   const { input } = props;
@@ -31,6 +31,8 @@ export default function Buttons(props) {
 
             // changing setInput state here only
             setInput(input.toUpperCase());
+            // calling the alert component
+            
           }}
         >
           Convert to Upper
@@ -91,11 +93,15 @@ export default function Buttons(props) {
         >
           Copy Text
         </button>
-        <button type="button" className="btn btn-success" onClick={() => {
-          setInput("");
-          setWordLength(0);
-          setNumberOfChars(0);
-        }}>
+        <button
+          type="button"
+          className="btn btn-success"
+          onClick={() => {
+            setInput("");
+            setWordLength(0);
+            setNumberOfChars(0);
+          }}
+        >
           Clear Text
         </button>
         <button type="button" className="btn btn-warning">

@@ -2,6 +2,7 @@ import Navbar from "./Navbar";
 import Input from "./Input";
 import Buttons from "./Buttons";
 import TextPreview from "./TextPreview";
+
 // import Temporary from "./Temporary"
 import { useState } from "react";
 
@@ -24,6 +25,7 @@ export default function App() {
       <Input setInput={setInput} input={input}   setWordLength={setWordLength} setNumberOfChars={setNumberOfChars}/>
       <Buttons input={input}  setInput={setInput} setWordLength={setWordLength} setNumberOfChars={setNumberOfChars} />
       <TextPreview input={input} wordLength={wordLength} numberOfChars= {numberOfChars} />
+      {/* <Alert /> */}
       {/* <Temporary /> */}
     </>
   )
